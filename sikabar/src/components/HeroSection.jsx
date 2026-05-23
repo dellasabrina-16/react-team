@@ -4,7 +4,7 @@ import agendaExam from '../assets/images/agenda-exam.svg'
 
 export default function HeroSection() {
   return (
-    <section className="flex flex-col md:flex-row bg-gradient-to-r from-blue-200 to-white min-h-[85vh] px-8 md:px-16 py-10 gap-8">
+    <section className="flex flex-col md:flex-row bg-gradient-to-r from-blue-500 to-white min-h-[85vh] px-8 md:px-16 py-10 gap-8">
       
       <div className="flex-1 flex justify-center">
         <img
