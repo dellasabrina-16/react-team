@@ -1,28 +1,28 @@
-import React from 'react'
-import Navbar from './components/Navbar'
-import HeroSection from './components/HeroSection'
-import FeaturesSection from './components/FeaturesSection'
-import JadwalSection from './components/JadwalSection'
-import AlokasiSection from './components/AlokasiSection'
-import PedomanSection from './components/PedomanSection'
-import GuruSection from './components/GuruSection'
-import DenahSection from './components/DenahSection'
-import Footer from './components/Footer'
+import React from "react";
+import { BrowserRouter, Routes, Route, useLocation } from "react-router-dom";
+import Navbar from "./components/Navbar";
+import Home from "./pages/Home";
+import UjianSumatif from "./pages/UjianSumatif";
 
-export default function App() {
-  return (
-    <div className="min-h-screen font-sans">
-      <Navbar />
-      <main>
-        <HeroSection />
-        <FeaturesSection />
-        <JadwalSection />
-        <AlokasiSection />
-        <PedomanSection />
-        <GuruSection />
-        <DenahSection />
-      </main>
-      <Footer />
+  function AppContent() {
+    const location = useLocation()
+    const hideNavbar = location.pathname === '/ujian-sumatif'
+    
+    return(
+    <div className="className">
+      {!hideNavbar && <Navbar />}
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/ujian-sumatif" element={<UjianSumatif />} />
+      </Routes>
     </div>
+  )
+}
+
+export default function App(){
+  return(
+    <BrowserRouter>
+      <AppContent />
+    </BrowserRouter>
   )
 }
