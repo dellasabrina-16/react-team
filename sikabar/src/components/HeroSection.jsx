@@ -1,6 +1,8 @@
 import React from 'react'
 import heroStudent from '../assets/images/hero-student.svg'
 import agendaExam from '../assets/images/agenda-exam.svg'
+import { Link } from 'react-router-dom'
+
 
 export default function HeroSection() {
   return (
@@ -46,9 +48,11 @@ export default function HeroSection() {
               <p className="text-gray-500 text-xs">
                 Fokus dan Percaya Diri! Selamat Berjuang di Ujian Kenaikan Kelas - umum
               </p>
-              <button className="bg-blue-500 hover:bg-blue-600 text-white text-xs font-semibold px-4 py-2 rounded w-fit transition-colors">
+              <Link
+               to="/ujian-sumatif"
+               className="bg-blue-500 hover:bg-blue-600 text-white text-xs font-semibold px-4 py-2 rounded w-fit transition-colors">
                 Lihat Sekarang
-              </button>
+              </Link>
             </div>
           </div>
         </div>
